@@ -14,7 +14,7 @@
       <thead>
         <tr>
           <th>ID Reporte</th>
-          <th>Salón/Área</th>
+          <th>Salón / Área</th>
           <th>Problema</th>
           <th>Descripción</th>
           <th>Fecha</th>
@@ -40,6 +40,10 @@
         if (resp.ok) {
           const reportes = await resp.json();
           cuerpoTabla.innerHTML = '';
+          if(reportes.length === 0){
+            cuerpoTabla.innerHTML = '<tr><td colspan="7" class="text-center">No hay reportes registrados.</td></tr>';
+            return;
+          }
           reportes.forEach(r => {
             cuerpoTabla.innerHTML += `
               <tr>
@@ -53,16 +57,11 @@
               </tr>
             `;
           });
-
-          if (reportes.length === 0) {
-            cuerpoTabla.innerHTML = '<tr><td colspan="7">No hay reportes registrados.</td></tr>';
-          }
-
         } else {
-          cuerpoTabla.innerHTML = '<tr><td colspan="7">Error al obtener reportes</td></tr>';
+          cuerpoTabla.innerHTML = '<tr><td colspan="7" class="text-center">Error al obtener reportes</td></tr>';
         }
       } catch (error) {
-        cuerpoTabla.innerHTML = '<tr><td colspan="7">Error de conexión</td></tr>';
+        cuerpoTabla.innerHTML = '<tr><td colspan="7" class="text-center">Error de conexión</td></tr>';
       }
     }
 
