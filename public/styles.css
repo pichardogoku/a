@@ -61,6 +61,16 @@ h1, h2 {
   color: #ffe6c7;
   border: 1px solid #ff9933;
 }
+.btn-secondary {
+  background-color: #995c00;
+  border-color: #995c00;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #cc7a00;
+  border-color: #cc7a00;
+}
 
 .form-control:focus, .form-select:focus {
   background-color: #ffcc99;
