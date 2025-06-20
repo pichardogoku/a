@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Actualizar Reporte</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
@@ -9,77 +9,58 @@
 <body>
   <div class="container py-5">
     <h2 class="mb-4 text-center">Actualizar Reporte</h2>
-
-    <form id="actualizarForm" method="POST" action="/actualizar">
+    <form method="POST" action="/actualizar">
       <div class="mb-3">
-        <label for="id_reporte" class="form-label">ID del Reporte a actualizar:</label>
-        <input type="text" class="form-control" id="id_reporte" name="id_reporte" required />
+        <label for="id_reporte" class="form-label">ID del Reporte:</label>
+        <input type="text" class="form-control" id="id_reporte" name="id_reporte" required>
       </div>
 
-      <p>¿Qué quieres actualizar? (Marca los campos que quieras actualizar)</p>
+      <p class="mb-2">Rellena solo los campos que quieras actualizar:</p>
 
-      <div class="form-check">
-        <input class="form-check-input campo-checkbox" type="checkbox" value="salon_area" id="checkSalon" />
-        <label class="form-check-label" for="checkSalon">Salón / Área</label>
-        <input type="text" class="form-control campo-input" id="salon_area" name="salon_area" disabled />
+      <div class="mb-3">
+        <label class="form-label">Salón / Área:</label>
+        <input type="text" class="form-control" name="salon_area">
       </div>
 
-      <div class="form-check">
-        <input class="form-check-input campo-checkbox" type="checkbox" value="problema" id="checkProblema" />
-        <label class="form-check-label" for="checkProblema">Problema</label>
-        <input type="text" class="form-control campo-input" id="problema" name="problema" disabled />
+      <div class="mb-3">
+        <label class="form-label">Problema:</label>
+        <input type="text" class="form-control" name="problema">
       </div>
 
-      <div class="form-check">
-        <input class="form-check-input campo-checkbox" type="checkbox" value="descripcion" id="checkDescripcion" />
-        <label class="form-check-label" for="checkDescripcion">Descripción</label>
-        <input type="text" class="form-control campo-input" id="descripcion" name="descripcion" disabled />
+      <div class="mb-3">
+        <label class="form-label">Descripción:</label>
+        <textarea class="form-control" name="descripcion" rows="3"></textarea>
       </div>
 
-      <div class="form-check">
-        <input class="form-check-input campo-checkbox" type="checkbox" value="fecha_reporte" id="checkFecha" />
-        <label class="form-check-label" for="checkFecha">Fecha del reporte</label>
-        <input type="date" class="form-control campo-input" id="fecha_reporte" name="fecha_reporte" disabled />
+      <div class="mb-3">
+        <label class="form-label">Fecha del Reporte:</label>
+        <input type="date" class="form-control" name="fecha_reporte">
       </div>
 
-      <div class="form-check">
-        <input class="form-check-input campo-checkbox" type="checkbox" value="prioridad" id="checkPrioridad" />
-        <label class="form-check-label" for="checkPrioridad">Prioridad</label>
-        <select class="form-select campo-input" id="prioridad" name="prioridad" disabled>
-          <option value="">Selecciona</option>
+      <div class="mb-3">
+        <label class="form-label">Prioridad:</label>
+        <select class="form-select" name="prioridad">
+          <option value="">(sin cambios)</option>
           <option value="Baja">Baja</option>
           <option value="Media">Media</option>
           <option value="Alta">Alta</option>
         </select>
       </div>
 
-      <div class="form-check">
-        <input class="form-check-input campo-checkbox" type="checkbox" value="estado" id="checkEstado" />
-        <label class="form-check-label" for="checkEstado">Estado</label>
-        <select class="form-select campo-input" id="estado" name="estado" disabled>
-          <option value="">Selecciona</option>
+      <div class="mb-3">
+        <label class="form-label">Estado:</label>
+        <select class="form-select" name="estado">
+          <option value="">(sin cambios)</option>
           <option value="Pendiente">Pendiente</option>
           <option value="En proceso">En proceso</option>
           <option value="Terminado">Terminado</option>
         </select>
       </div>
 
-      <button type="submit" class="btn btn-warning mt-3">Actualizar</button>
+      <button type="submit" class="btn btn-warning w-100">Actualizar</button>
     </form>
   </div>
-
-  <script>
-    // Habilitar o deshabilitar input según checkbox
-    const checkboxes = document.querySelectorAll('.campo-checkbox');
-    checkboxes.forEach(chk => {
-      chk.addEventListener('change', (e) => {
-        const campo = e.target.value;
-        const input = document.getElementById(campo);
-        input.disabled = !e.target.checked;
-        if (!e.target.checked) input.value = '';
-      });
-    });
-  </script>
 </body>
 </html>
+
 
