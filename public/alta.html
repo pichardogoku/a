@@ -7,71 +7,52 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
-
-
-
-<div class="text-center mt-4">
-  <a href="index.html" class="btn btn-secondary">Volver al menú principal</a>
-</div>
-
-
-
-
-
-
-
   <div class="container py-5">
-    <h2 class="mb-4 text-center">Dar de Alta un Reporte</h2>
-
+    <h2 class="mb-4 text-center">Alta de Reporte</h2>
     <form method="POST" action="/alta">
       <div class="mb-3">
-        <label for="id_reporte" class="form-label">ID del Reporte:</label>
-        <input type="text" class="form-control" id="id_reporte" name="id_reporte" required />
+        <label class="form-label">ID del Reporte:</label>
+        <input type="text" class="form-control" name="id_reporte" required>
       </div>
-
       <div class="mb-3">
-        <label for="salon_area" class="form-label">Salón / Área:</label>
-        <input type="text" class="form-control" id="salon_area" name="salon_area" required />
+        <label class="form-label">Salón / Área:</label>
+        <input type="text" class="form-control" name="salon_area" required>
       </div>
-
       <div class="mb-3">
-        <label for="problema" class="form-label">Problema:</label>
-        <input type="text" class="form-control" id="problema" name="problema" required />
+        <label class="form-label">Problema:</label>
+        <input type="text" class="form-control" name="problema" required>
       </div>
-
       <div class="mb-3">
-        <label for="descripcion" class="form-label">Descripción:</label>
-        <textarea class="form-control" id="descripcion" name="descripcion" rows="3" required></textarea>
+        <label class="form-label">Descripción:</label>
+        <textarea class="form-control" name="descripcion" rows="3" required></textarea>
       </div>
-
       <div class="mb-3">
-        <label for="fecha_reporte" class="form-label">Fecha del reporte:</label>
-        <input type="date" class="form-control" id="fecha_reporte" name="fecha_reporte" required />
+        <label class="form-label">Fecha del Reporte:</label>
+        <input type="date" class="form-control" name="fecha_reporte" required>
       </div>
-
       <div class="mb-3">
-        <label for="prioridad" class="form-label">Prioridad:</label>
-        <select class="form-select" id="prioridad" name="prioridad" required>
-          <option value="" selected disabled>Selecciona</option>
+        <label class="form-label">Prioridad:</label>
+        <select class="form-select" name="prioridad" required>
           <option value="Baja">Baja</option>
           <option value="Media">Media</option>
           <option value="Alta">Alta</option>
         </select>
       </div>
-
       <div class="mb-3">
-        <label for="estado" class="form-label">Estado:</label>
-        <select class="form-select" id="estado" name="estado" required>
-          <option value="" selected disabled>Selecciona</option>
+        <label class="form-label">Estado:</label>
+        <select class="form-select" name="estado" required>
           <option value="Pendiente">Pendiente</option>
           <option value="En proceso">En proceso</option>
           <option value="Terminado">Terminado</option>
         </select>
       </div>
-
-      <button type="submit" class="btn btn-primary w-100">Registrar Reporte</button>
+      <button type="submit" class="btn btn-primary w-100">Guardar</button>
     </form>
+
+    <div class="text-center mt-4">
+      <a href="index.html" class="btn btn-secondary">Volver al menú principal</a>
+    </div>
   </div>
 </body>
 </html>
+

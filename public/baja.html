@@ -7,25 +7,19 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
-
-<div class="text-center mt-4">
-  <a href="index.html" class="btn btn-secondary">Volver al menú principal</a>
-</div>
-
-
   <div class="container py-5">
-    <h2 class="mb-4 text-center">Eliminar Reporte</h2>
-
+    <h2 class="mb-4 text-center">Baja de Reporte</h2>
     <form method="POST" action="/baja">
       <div class="mb-3">
-        <label for="id_reporte" class="form-label">ID del Reporte a eliminar:</label>
-        <input type="text" class="form-control" id="id_reporte" name="id_reporte" required />
+        <label class="form-label">ID del Reporte a eliminar:</label>
+        <input type="text" class="form-control" name="id_reporte" required>
       </div>
-
-      <button type="submit" class="btn btn-danger w-100">Eliminar Reporte</button>
+      <button type="submit" class="btn btn-danger w-100">Eliminar</button>
     </form>
+
+    <div class="text-center mt-4">
+      <a href="index.html" class="btn btn-secondary">Volver al menú principal</a>
+    </div>
   </div>
 </body>
 </html>
-
