@@ -2,13 +2,13 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Actualizar Reporte</title>
+  <title>Actualizar Reporte PAEC</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="container py-5">
-    <h2 class="mb-4 text-center">Actualizar Reporte</h2>
+    <h2 class="mb-4 text-center">Actualizar Reporte PAEC</h2>
     <form method="POST" action="/actualizar">
       <div class="mb-3">
         <label for="id_reporte" class="form-label">ID del Reporte:</label>
@@ -18,13 +18,13 @@
       <p class="mb-2">Rellena solo los campos que quieras actualizar:</p>
 
       <div class="mb-3">
-        <label class="form-label">Salón / Área:</label>
-        <input type="text" class="form-control" name="salon_area">
+        <label class="form-label">Área o Salón:</label>
+        <input type="text" class="form-control" name="area">
       </div>
 
       <div class="mb-3">
-        <label class="form-label">Problema:</label>
-        <input type="text" class="form-control" name="problema">
+        <label class="form-label">Tipo de Reporte:</label>
+        <input type="text" class="form-control" name="tipo_reporte">
       </div>
 
       <div class="mb-3">
@@ -33,18 +33,23 @@
       </div>
 
       <div class="mb-3">
-        <label class="form-label">Fecha del Reporte:</label>
-        <input type="date" class="form-control" name="fecha_reporte">
+        <label class="form-label">Fecha:</label>
+        <input type="date" class="form-control" name="fecha">
       </div>
 
       <div class="mb-3">
-        <label class="form-label">Prioridad:</label>
-        <select class="form-select" name="prioridad">
-          <option value="">(sin cambios)</option>
-          <option value="Baja">Baja</option>
-          <option value="Media">Media</option>
-          <option value="Alta">Alta</option>
-        </select>
+        <label class="form-label">Participantes:</label>
+        <input type="number" class="form-control" name="participantes">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Kilos Reciclados:</label>
+        <input type="number" step="0.1" class="form-control" name="kilos_reciclados">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Responsable:</label>
+        <input type="text" class="form-control" name="responsable">
       </div>
 
       <div class="mb-3">
@@ -52,8 +57,8 @@
         <select class="form-select" name="estado">
           <option value="">(sin cambios)</option>
           <option value="Pendiente">Pendiente</option>
-          <option value="En proceso">En proceso</option>
-          <option value="Terminado">Terminado</option>
+          <option value="En progreso">En progreso</option>
+          <option value="Completado">Completado</option>
         </select>
       </div>
 
@@ -66,5 +71,4 @@
   </div>
 </body>
 </html>
-
 

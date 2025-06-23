@@ -2,48 +2,52 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>Alta de Reporte</title>
+  <title>Alta de Reporte PAEC</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="container py-5">
-    <h2 class="mb-4 text-center">Alta de Reporte</h2>
+    <h2 class="mb-4 text-center">Alta de Reporte PAEC</h2>
     <form method="POST" action="/alta">
       <div class="mb-3">
         <label class="form-label">ID del Reporte:</label>
         <input type="text" class="form-control" name="id_reporte" required>
       </div>
       <div class="mb-3">
-        <label class="form-label">Salón / Área:</label>
-        <input type="text" class="form-control" name="salon_area" required>
+        <label class="form-label">Área o Salón:</label>
+        <input type="text" class="form-control" name="area" required>
       </div>
       <div class="mb-3">
-        <label class="form-label">Problema:</label>
-        <input type="text" class="form-control" name="problema" required>
+        <label class="form-label">Tipo de Reporte:</label>
+        <input type="text" class="form-control" name="tipo_reporte" required>
       </div>
       <div class="mb-3">
         <label class="form-label">Descripción:</label>
         <textarea class="form-control" name="descripcion" rows="3" required></textarea>
       </div>
       <div class="mb-3">
-        <label class="form-label">Fecha del Reporte:</label>
-        <input type="date" class="form-control" name="fecha_reporte" required>
+        <label class="form-label">Fecha:</label>
+        <input type="date" class="form-control" name="fecha" required>
       </div>
       <div class="mb-3">
-        <label class="form-label">Prioridad:</label>
-        <select class="form-select" name="prioridad" required>
-          <option value="Baja">Baja</option>
-          <option value="Media">Media</option>
-          <option value="Alta">Alta</option>
-        </select>
+        <label class="form-label">Participantes:</label>
+        <input type="number" class="form-control" name="participantes" required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Kilos Reciclados:</label>
+        <input type="number" step="0.1" class="form-control" name="kilos_reciclados" required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Responsable:</label>
+        <input type="text" class="form-control" name="responsable" required>
       </div>
       <div class="mb-3">
         <label class="form-label">Estado:</label>
         <select class="form-select" name="estado" required>
           <option value="Pendiente">Pendiente</option>
-          <option value="En proceso">En proceso</option>
-          <option value="Terminado">Terminado</option>
+          <option value="En progreso">En progreso</option>
+          <option value="Completado">Completado</option>
         </select>
       </div>
       <button type="submit" class="btn btn-primary w-100">Guardar</button>
